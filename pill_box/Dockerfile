@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.12
 
 WORKDIR /opt/app
 RUN groupadd -r django_user && useradd -d /opt/app -r -g django_user django_user \
@@ -7,8 +7,6 @@ RUN groupadd -r django_user && useradd -d /opt/app -r -g django_user django_user
 COPY infra/configs/uwsgi/uwsgi.ini uwsgi.ini
 
 RUN apt-get update && \
-    apt-get install -y libpcre3 libpcre3-dev && \
-    apt-get install -y build-essential && \
     pip install --upgrade pip
 
 COPY requirements.txt requirements.txt

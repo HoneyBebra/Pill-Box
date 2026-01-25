@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  pill-box:
-    container_name: pill-box
+  pill_box:
+    container_name: pill_box
     build: .
     restart: always
     image: pill-box
@@ -21,7 +21,7 @@ services:
 
   postgres:
     container_name: postgres
-    image: postgres:13.3
+    image: postgres:14  # TODO: put the last version
     environment:
       POSTGRES_DB: "${POSTGRES_DB}"
       POSTGRES_USER: "${POSTGRES_USER}"
