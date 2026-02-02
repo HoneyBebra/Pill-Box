@@ -19,4 +19,6 @@ USER django_user
 
 EXPOSE 8080
 
+RUN ./manage.py collectstatic --noinput
+
 ENTRYPOINT ["uwsgi", "--strict", "--ini", "uwsgi.ini"]
