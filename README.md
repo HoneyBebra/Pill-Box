@@ -1,6 +1,6 @@
 # Pill-Box
-An app that reminds you to take your medication and keeps track of how many doses you have left in your medicine
-cabinet. Written on DRF
+Приложение напоминаний о приёмах лекарств, также ведёт учёт
+количества оставшихся лекарств в аптечке
 
 ---
 
@@ -21,6 +21,7 @@ cabinet. Written on DRF
 | name        | VARCHAR       | Наименование лекарства                        |
 | quantity    | INT/DECIMAL   | Количество оставшихся единиц (таблеток и т.п.) |
 | unit        | VARCHAR       | Единица учёта (таблетки, капсулы, мл и т.д.)  |
+| description | TEXT          | Описание / заметки о лекарстве                |
 | created_at  | DATETIME      | Дата создания                                 |
 | updated_at  | DATETIME      | Дата обновления                               |
 
@@ -82,7 +83,7 @@ cabinet. Written on DRF
 ---
 
 ### Deploy
-To deploy run:
+Для деплоя выполните:
 ```commandline
 cd pill_box
 
